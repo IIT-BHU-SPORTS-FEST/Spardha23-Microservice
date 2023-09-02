@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# MacOS
+.DS_Store
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Testing
+coverage/
+__tests__/
+
+# Build output
+build/
+dist/
+
+# Debug logs
+debug.log
