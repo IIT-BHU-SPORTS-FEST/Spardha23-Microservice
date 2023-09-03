@@ -5,10 +5,8 @@ import { validateGameDELETEData, validateGamePATCHData, validateGamePOSTData } f
 const {addGame, allGames, editGame, deleteGame} = gameController;
 const router = express.Router();
 
-router.post("/addGame", validateGamePOSTData() , addGame);
-router.get("/allGames", allGames);
-router.patch("/editGame/:game_id", validateGamePATCHData(), editGame);
-router.delete("/deleteGame/:game_id", validateGameDELETEData(), deleteGame);
+router.route("/").get(allGames).post(validateGamePOSTData(),addGame);
+router.route("/:game_id").patch(validateGamePATCHData(), editGame).delete(validateGameDELETEData(), deleteGame);
 
 export default router;
 

@@ -1,10 +1,5 @@
 import { body, param } from "express-validator";
 
-/**
- * Validates the data of a POST request 
- * @param {Express.Request.body} data the body of the POST request
- * @returns {Array} [true,validatedData] if the data is valid, [false,undefined] otherwise. The validatedData is to be passed directly to model constructor
- */
 export const validateGamePOSTData = () => [
     body('game_name')
         .notEmpty().withMessage('Game name cannot be empty')

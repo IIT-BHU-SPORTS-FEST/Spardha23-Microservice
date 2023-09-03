@@ -3,7 +3,6 @@ import gameRouter from "./routes/gameRouter.js";
 import { errorMiddleware } from "./middlewares/error.js";
 import swaggerUi from "swagger-ui-express";
 import YAML from 'yamljs';
-import { logDiscord } from "./utils/logDiscord.js";
 
 
 const swaggerDocument = YAML.load('./config/gameRoutes.yaml');

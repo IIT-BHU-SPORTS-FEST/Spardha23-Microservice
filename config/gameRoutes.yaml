@@ -11,7 +11,7 @@ tags:
   - name: Games
     description: To add, get, edit, delete Games
 paths:
-  /games/addGame:
+  /games/:
     post:
       tags:
         - Games
@@ -53,7 +53,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GeneralError'
-  /games/allGames:
     get:
       tags:
         - Games
@@ -79,7 +78,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GeneralError'
-  /games/editGame/{game_id}:
+  /games/{game_id}:
     patch:
       tags:
         - Games
@@ -132,9 +131,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GeneralError'
-                
-                
-  /games/deleteGame/{game_id}:
     delete:
       tags:
         - Games
