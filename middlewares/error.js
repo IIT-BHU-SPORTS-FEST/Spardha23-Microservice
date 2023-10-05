@@ -15,9 +15,6 @@ export const errorMiddleware = (err, req, res, next) => {
 		success: false,
 		message: err.message,
 	};
-	if(err.errors.length) {
-		sendobj["errors"] = err.errors;
-	}
 	if(process.env.NODE_ENV==="development")
 	sendobj.stack=err.stack;
 	res.status(err.statusCode).json(sendobj);
