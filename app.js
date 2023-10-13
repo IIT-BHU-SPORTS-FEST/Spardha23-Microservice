@@ -13,7 +13,9 @@ app.use(express.json());
 
 //using routes
 app.use("/api/v1/games", gameRouter);
-
+app.get("/",(req,res)=>{
+    res.status(200).send("microservice is running");
+})
 //Using middlewares
 app.use(errorMiddleware);
 
